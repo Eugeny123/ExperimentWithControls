@@ -22,7 +22,16 @@ namespace ExperimentWithControls
     {
         public MainWindow()
         {
-            InitializeComponent();
+           // InitializeComponent();
+        }
+        private void numberTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            number.Text = numberTextBox.Text;
+        }
+       
+        private void numberTextBox_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !int.TryParse(e.Text, out int result);
         }
     }
 }
