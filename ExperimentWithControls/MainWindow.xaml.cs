@@ -98,9 +98,9 @@ namespace ExperimentWithControls
 
         private void myListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (myListBox.SelectedItem is ListBoxItem)
+            if (myListBox.SelectedItem is ListBoxItem listBoxItem)
             {
-                number.Text = ListBoxItem.ContentProperty.ToString();
+                number.Text = listBoxItem.Content.ToString();
             }
         }
 
